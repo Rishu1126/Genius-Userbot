@@ -6,11 +6,11 @@ from ...modules.mongo.raidzone import *
 @sudo_users_only
 async def add_fuck_raid(client, message):
     try:
-        aux = await eor(message, "**🔄 Processing ...**")
+        aux = await eor(message, "**🔄 𝙋𝙧𝙤𝙘𝙚𝙨𝙨𝙞𝙣𝙜 ...**")
         if not message.reply_to_message:
             if len(message.command) != 2:
                 return await aux.edit(
-                    "**🤖 Reply to a user's message or give username/user_id.**"
+                    "**👉🏻 𝙍𝙚𝙥𝙡𝙮 𝙩𝙤 𝙖 𝙪𝙨𝙚𝙧'𝙨 𝙢𝙚𝙨𝙨𝙖𝙜𝙚 𝙤𝙧 𝙜𝙞𝙫𝙚 𝙐𝙨𝙚𝙧𝙣𝙖𝙢𝙚/𝙪𝙨𝙚𝙧_𝙞𝙙 🫠.**"
                 )
             user = message.text.split(None, 1)[1]
             if "@" in user:
@@ -22,16 +22,16 @@ async def add_fuck_raid(client, message):
 
         if user_id == message.from_user.id:
             return await aux.edit(
-                "**🤣 How Fool, You Want To Activate Reply Raid On Your Own ID❓**"
+                "**🤣 𝙗𝙡𝙤𝙤𝙙𝙮 𝙁𝙤𝙤𝙡, 𝙒𝙝𝙮 𝙙𝙤 𝙔𝙤𝙪 𝙒𝙖𝙣𝙩 𝙏𝙤 𝘼𝙘𝙩𝙞𝙫𝙖𝙩𝙚 𝙍𝙚𝙥𝙡𝙮 𝙍𝙖𝙞𝙙 𝙊𝙣 𝙔𝙤𝙪𝙧 𝙊𝙬𝙣 𝙄𝘿 😡❓**"
             )
         
         fraid = await add_fuckraid_user(user_id)
         if fraid:
             return await aux.edit(
-                "**🤖 Successfully Added Reply Raid On This User.**"
+                "**💥 𝙎𝙪𝙘𝙘𝙚𝙨𝙨𝙛𝙪𝙡𝙡𝙮 𝘼𝙙𝙙𝙚𝙙 𝙍𝙚𝙥𝙡𝙮 𝙍𝙖𝙞𝙙 𝙊𝙣 𝙏𝙝𝙞𝙨 𝙐𝙨𝙚𝙧 😍.**"
             )
         return await aux.edit(
-            "**🤖 Hey, Reply Raid Already Active On This User❗**"
+            "**👉🏻 𝘿𝙪𝙙𝙚, 𝙍𝙚𝙥𝙡𝙮 𝙍𝙖𝙞𝙙 𝘼𝙡𝙧𝙚𝙖𝙙𝙮 𝘼𝙘𝙩𝙞𝙫𝙚 𝙊𝙣 𝙏𝙝𝙞𝙨 𝙐𝙨𝙚𝙧 🌸**"
         )
     except Exception as e:
         print("Error: `{e}`")
@@ -44,11 +44,11 @@ async def add_fuck_raid(client, message):
 @sudo_users_only
 async def del_fuck_raid(client, message):
     try:
-        aux = await eor(message, "**🔄 Processing ...**")
+        aux = await eor(message, "**🔄 𝙋𝙧𝙤𝙘𝙚𝙨𝙨𝙞𝙣𝙜 ...**")
         if not message.reply_to_message:
             if len(message.command) != 2:
                 return await aux.edit(
-                    "**🤖 Reply to a user's message or give username/user_id.**"
+                    "**👉🏻 𝙍𝙚𝙥𝙡𝙮 𝙩𝙤 𝙖 𝙪𝙨𝙚𝙧'𝙨 𝙢𝙚𝙨𝙨𝙖𝙜𝙚 𝙤𝙧 𝙜𝙞𝙫𝙚 𝙪𝙨𝙚𝙧𝙣𝙖𝙢𝙚/𝙪𝙨𝙚𝙧_𝙞𝙙 😇.**"
                 )
             user = message.text.split(None, 1)[1]
             if "@" in user:
@@ -60,16 +60,16 @@ async def del_fuck_raid(client, message):
         
         if user_id == message.from_user.id:
             return await aux.edit(
-                "**🤣 How Fool, When I Activate Reply Raid On Your ID❓**"
+                "**🤣 𝘽𝙡𝙤𝙤𝙙𝙮 𝙁𝙤𝙤𝙡, 𝙒𝙝𝙮 𝘿𝙤 𝙪 𝙒𝙖𝙣𝙩 𝘼𝙘𝙩𝙞𝙫𝙖𝙩𝙚 𝙍𝙚𝙥𝙡𝙮 𝙍𝙖𝙞𝙙 𝙊𝙣 𝙔𝙤𝙪𝙧 𝙄𝘿❓**"
             )
         
         fraid = await del_fuckraid_user(user_id)
         if fraid:
             return await aux.edit(
-                "**🤖 Successfully Removed Reply Raid From This User.**"
+                "**👉🏻 𝙎𝙪𝙘𝙘𝙚𝙨𝙨𝙛𝙪𝙡𝙡𝙮 𝙍𝙚𝙢𝙤𝙫𝙚𝙙 𝙍𝙚𝙥𝙡𝙮 𝙍𝙖𝙞𝙙 𝙁𝙧𝙤𝙢 𝙏𝙝𝙞𝙨 𝙐𝙨𝙚𝙧 ⚡.**"
             )
         return await aux.edit(
-            "**🤖 Hey, Reply Raid Not Active On This User❗**"
+            "**👉🏻 𝘿𝙪𝙙𝙚, 𝙍𝙚𝙥𝙡𝙮 𝙍𝙖𝙞𝙙 𝙉𝙤𝙩 𝘼𝙘𝙩𝙞𝙫𝙖𝙩𝙚𝙙 𝙊𝙣 𝙏𝙝𝙞𝙨 𝙐𝙨𝙚𝙧 😿**"
         )
     except Exception as e:
         print("Error: `{e}`")
