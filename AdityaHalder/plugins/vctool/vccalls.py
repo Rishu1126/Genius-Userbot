@@ -35,10 +35,10 @@ async def get_vc_call(client, message):
 async def create_video_chat(client, message):
     chat_id = message.chat.id
     try:
-        aux = await eor(message, "**🔄 Processing ...**")
+        aux = await eor(message, "**🔄 𝙋𝙧𝙤𝙘𝙚𝙨𝙨𝙞𝙣𝙜 ...**")
         vc_call = await get_vc_call(client, message)
         if vc_call:
-            return await aux.edit("**🤖 VC Already Active❗**")
+            return await aux.edit("**👉🏻 𝙑𝘾 𝘼𝙡𝙧𝙚𝙖𝙙𝙮 𝘼𝙘𝙩𝙞𝙫𝙚❗**")
         peer = await client.resolve_peer(chat_id)
         await client.invoke(
             CreateGroupCall(
@@ -46,7 +46,7 @@ async def create_video_chat(client, message):
                 random_id=client.rnd_id() // 9000000000,
             ),
         )
-        await aux.edit("**🤖 Successfully Started VC. 🌿**")
+        await aux.edit("**👉🏻 𝙎𝙪𝙘𝙘𝙚𝙨𝙨𝙛𝙪𝙡𝙡𝙮 𝙎𝙩𝙖𝙧𝙩𝙚𝙙 𝙑𝘾. 🌿**")
     except Exception as e:
         print(f"Error: {e}")
         pass
@@ -58,14 +58,14 @@ async def create_video_chat(client, message):
 async def discard_video_chat(client, message):
     user_id = message.from_user.id
     try:
-        aux = await eor(message, "**🔄 Processing ...**")
+        aux = await eor(message, "**🔄 𝙋𝙧𝙤𝙘𝙚𝙨𝙨𝙞𝙣𝙜 ...**")
         vc_call = await get_vc_call(client, message)
         if not vc_call:
-            return await aux.edit("**🤖 VC Not Started Yet❗**")
+            return await aux.edit("**👉🏻 𝙑𝘾 𝙉𝙤𝙩 𝙎𝙩𝙖𝙧𝙩𝙚𝙙 𝙔𝙚𝙩❗**")
         await client.invoke(
             DiscardGroupCall(call=vc_call)
         )
-        return await aux.edit("**🤖 Succesfully Ended VC. 🌿**")
+        return await aux.edit("**👉🏻 𝙎𝙪𝙘𝙘𝙚𝙨𝙛𝙪𝙡𝙡𝙮 𝙀𝙣𝙙𝙚𝙙 𝙑𝘾. 🌿**")
     except Exception as e:
         print(f"Error: {e}")
         pass
@@ -76,22 +76,22 @@ async def discard_video_chat(client, message):
 async def discard_video_chat(client, message):
     chat_id = message.chat.id
     try:
-        aux = await eor(message, "**🔄 Processing ...**")
+        aux = await eor(message, "**🔄 𝙋𝙧𝙤𝙘𝙚𝙨𝙨𝙞𝙣𝙜 ...**")
         vc_call = await get_vc_call(client, message)
         if not vc_call:
-            return await aux.edit("**🤖 VC Not Started Yet❗**")
+            return await aux.edit("**👉🏻 𝙑𝘾 𝙉𝙤𝙩 𝙎𝙩𝙖𝙧𝙩𝙚𝙙 𝙔𝙚𝙩❗**")
         peer = await client.resolve_peer(chat_id)
         await client.invoke(
             DiscardGroupCall(call=vc_call)
         )
-        await aux.edit("**🤖 Succesfully Ended VC. 🌿**")
+        await aux.edit("**👉🏻 𝙎𝙪𝙘𝙘𝙚𝙨𝙛𝙪𝙡𝙡𝙮 𝙀𝙣𝙙𝙚𝙙 𝙑𝘾. 🌿**")
         await client.invoke(
             CreateGroupCall(
                 peer=peer,
                 random_id=client.rnd_id() // 9000000000,
             ),
         )
-        return await aux.edit("**🤖 Succesfully Restarted VC. 🌿**")
+        return await aux.edit("**👉🏻 𝙎𝙪𝙘𝙘𝙚𝙨𝙛𝙪𝙡𝙡𝙮 𝙍𝙚𝙨𝙩𝙖𝙧𝙩𝙚𝙙 𝙑𝘾. 🌿**")
     except Exception as e:
         print(f"Error: {e}")
         pass
